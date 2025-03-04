@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Forecast App</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather-app">
+        <div class="search-container">
+          <input type="text" id="city-input" placeholder="Enter city name" />
+          <button id="search-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+        </div>
+
+        <div class="weather-info">
+          <div class="location-container">
+            <h2 id="city-name">-</h2>
+            <p id="current-date">-</p>
+          </div>
+
+          <div class="temperature-container">
+            <div class="temperature-main">
+              <h1 id="temperature">-°</h1>
+              <div class="weather-description">
+                <img id="weather-icon" src="" alt="Weather Icon" />
+                <p id="description">-</p>
+              </div>
+            </div>
+
+            <div class="additional-info">
+              <div class="info-item">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z"
+                  ></path>
+                  <path
+                    d="M20 6.41V14a6 6 0 0 1-12 0V6.41a2 2 0 1 0-2 0V14a8 8 0 0 0 16 0V6.41a2 2 0 1 0-2 0z"
+                  ></path>
+                </svg>
+                <div>
+                  <p>Humidity</p>
+                  <span id="humidity">-%</span>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"></path>
+                </svg>
+                <div>
+                  <p>Wind Speed</p>
+                  <span id="wind-speed">- km/h</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

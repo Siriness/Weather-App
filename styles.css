@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #72edf2 10%, #5151e5 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.container {
+  width: 100%;
+  max-width: 450px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  padding: 24px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-container {
+  display: flex;
+  margin-bottom: 24px;
+}
+
+#city-input {
+  flex-grow: 1;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 8px 0 0 8px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+#city-input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#search-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  padding: 12px 16px;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#search-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+#search-btn svg {
+  stroke: white;
+}
+
+.location-container {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+#city-name {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+#current-date {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.temperature-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+#temperature {
+  font-size: 64px;
+  font-weight: 600;
+}
+
+.weather-description {
+  text-align: right;
+}
+
+#weather-icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 8px;
+}
+
+#description {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.additional-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 12px;
+  border-radius: 8px;
+  gap: 12px;
+}
+
+.info-item svg {
+  stroke: white;
+  width: 32px;
+  height: 32px;
+}
+
+.info-item div p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.info-item div span {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 95%;
+    margin: 16px;
+    padding: 16px;
+  }
+
+  .temperature-main {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .weather-description {
+    text-align: center;
+    margin-top: 16px;
+  }
+
+  .additional-info {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
